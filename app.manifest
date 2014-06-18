@@ -2,6 +2,7 @@ CACHE MANIFEST
 
 CACHE:
 //maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css
+//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/fonts/glyphicons-halflings-regular.woff
 Selfie.htm
 script.js
 //code.jquery.com/jquery-1.11.0.min.js
