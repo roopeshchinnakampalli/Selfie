@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" manifest="app.manifest">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Selfie</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <style>
+        #supported {
+            display:none;
+        }
+        #notSupported{
+            display: none;
+        }
+        #cancelled{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="supported">
+        <div class="row">
+            <div class="col-md-*">
+                <h1>Create your Selfie...</h1>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <video id="video"></video>
+            </div>
+
+            <div class="col-md-8">
+
+                <img src="" id="photo" class="img-rounded">
+                <blockquote id="msg" style="display:none;">
+                    <p class="text-primary">Right click on the image and save to your computer!</p>
+                </blockquote>
+                <!--  <button id="savebutton" class="btn btn-primary" >Save Photo</button> -->
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+
+                <button id="startbutton" class="btn btn-primary">Take photo</button>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="canvas" style="display:none;"></canvas>
+
+            </div>
+        </div>
+        <div class="row" style="margin-top:50px;">
+            <footer>
+                Made in <span class="glyphicon glyphicon-heart"></span> with HTML 5 Web RTC. &copy; TickleTheWeb. Roopesh Reddy C.
+            </footer>
+        </div>
+        </div>
+        
+        <div class="jumbotron" id="notSupported">
+            <h3>Ooops, your browser doesn't support WebRTC :(</h3>
+            <p>Please try in Google Chrome, Mozilla Firefox or Opera!</p>
+        </div>
+       
+        <div class="jumbotron" id="cancelled">
+            <h3>Aaah, you should have clicked 'ALLOW' !!!</h3>
+            <p>Please click Allow button on the notification under address bar!</p>
+        </div>
+
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="script.js" ></script>
+    
+</body>
+
+</html>
