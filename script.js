@@ -12,7 +12,7 @@
         notsupported = document.querySelector('#notSupported'),
         cancelled = document.querySelector('#cancelled'),
         width = 320,
-        height = 0;
+        height = 240;
 
     navigator.getMedia = (navigator.getUserMedia ||
          navigator.webkitGetUserMedia ||
@@ -51,9 +51,6 @@
 
     video.addEventListener('canplay', function (ev) {
         if (!streaming) {
-            while (video.videoHeight <= 0) {
-                height = video.videoHeight / (video.videoWidth / width);
-            }
             video.setAttribute('width', width);
             video.setAttribute('height', height);
             canvas.setAttribute('width', width);
