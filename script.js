@@ -37,6 +37,7 @@
                 var vendorURL = window.URL || window.webkitURL;
                 video.src = vendorURL.createObjectURL(stream);
             }
+            
             video.play();
             supported.style.display = "block";
         },
@@ -50,7 +51,9 @@
 
     video.addEventListener('canplay', function (ev) {
         if (!streaming) {
-            height = video.videoHeight / (video.videoWidth / width);
+            while (video.videoHeight <= 0) {
+                height = video.videoHeight / (video.videoWidth / width);
+            }
             video.setAttribute('width', width);
             video.setAttribute('height', height);
             canvas.setAttribute('width', width);
