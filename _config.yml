@@ -1,0 +1,8 @@
+title: Selfie
+description: Power of HTML5 WebRTC
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
